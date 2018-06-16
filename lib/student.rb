@@ -73,6 +73,7 @@ class Student
       SELECT *
       FROM students
       WHERE name = ?
+      LIMIT 1
     SQL
 
     row = DB[:conn].execute(sql, name).map do |row| 
