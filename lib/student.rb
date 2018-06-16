@@ -76,7 +76,7 @@ class Student
     SQL
 
     row = DB[:conn].execute(sql, name).map do |row| 
-    
+    tudent.new()
   end
 
 
