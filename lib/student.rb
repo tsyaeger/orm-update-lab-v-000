@@ -70,8 +70,9 @@ class Student
       SELECT * FROM students WHERE name = ?
     SQL
 
-    result = DB[:conn].execute(sql, name)[0]
-    Student.new(result[1], result[2], result[0])
+    row = DB[:conn].execute(sql, name)[0]
+    puts row
+    Student.new(row[1], row[2], row[0])
   end
   
   def update
